@@ -990,3 +990,7 @@ input, textarea, select {
 
 /*  END OF MEDIA QUERIES */
 
+.qb{
+  float:left;
+  margin:20px;
+}
