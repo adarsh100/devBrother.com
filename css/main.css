@@ -990,7 +990,17 @@ input, textarea, select {
 
 /*  END OF MEDIA QUERIES */
 
+/* CUSTOM CSS*/
 .qb{
   float:left;
   margin:20px;
 }
+
+.anime span{
+  position:relative;
+  -webkit-transition: all 0.2s ease-out;
+}
+.anime span:hover {
+  top:4px;
+}
+

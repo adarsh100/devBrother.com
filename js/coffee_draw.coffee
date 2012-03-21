@@ -71,7 +71,6 @@ coffee_draw = (p) ->
         @animation_i++
       if @animation_i > 40
         p.frameRate 4
-        console.log @animation_i
 
 
 

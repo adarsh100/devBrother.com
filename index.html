@@ -18,8 +18,8 @@
 
           <link href="css/main.css" rel="stylesheet" type="text/css" />
 
-          <script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-          <script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+          <script type="text/javascript" src="js/libs/jquery-1.5.min.js"></script>
+          <script type="text/javascript" src="js/libs/jquery.lettering.min.js"></script>
           <script type="text/javascript" src="js/custom.js"> </script>
           <script type='text/javascript'>
 
@@ -42,6 +42,8 @@
                     this.value = default_values[this.id];
                   }
                 });
+              });
+              $('.lettering').lettering();
             });
           </script>
   </head>
@@ -67,8 +69,8 @@
           </div>
         </div>
         <div id="product_content">
-          <h2>WE BUILD AWESOME.</h2>
-          <h6>WEB APPLICATION.</h6>
+          <h2 class="lettering anime">WE BUILD AWESOME.</h2>
+          <h6 class="lettering anime">WEB APPLICATIONS.</h6>
           <div class="clear_small"></div><!-- This is a clear fix -->
         </div>
       </div>
