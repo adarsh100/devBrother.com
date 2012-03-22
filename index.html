@@ -8,7 +8,6 @@
         <![endif]-->
 
 
-        <!-- Mirrored from mythemepreviews.com/nice_app/ by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 21 Mar 2012 05:00:22 GMT -->
         <head>
 
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -23,25 +22,6 @@
           <script type='text/javascript'>
 
             $(document).ready(function(){
-              var active_color = '#929191'; // Colour of user provided text
-              var inactive_color = '#929191'; // Colour of default text
-              $("input.default-value").css("color", inactive_color);
-              var default_values = new Array();
-              $("input.default-value").focus(function() {
-                if (!default_values[this.id]) {
-                  default_values[this.id] = this.value;
-                }
-                if (this.value == default_values[this.id]) {
-                  this.value = '';
-                  this.style.color = active_color;
-                }
-                $(this).blur(function() {
-                  if (this.value == '') {
-                    this.style.color = inactive_color;
-                    this.value = default_values[this.id];
-                  }
-                });
-              });
               $('.lettering').lettering();
             });
           </script>
@@ -64,10 +44,8 @@
             </div>
           </div>
           <div class="spider_background" >
-		 <div class="spider" id="canvas_holder">
-        <canvas class="shadow" id="processing"></canvas>
-      </div>
-        </div>
+            <canvas class="shadow" id="processing"></canvas>
+          </div>
         </div>
         <div id="product_content">
           <h2 class="lettering anime">WE BUILD AWESOME.</h2>
@@ -115,9 +93,9 @@
            
           </div>
         </div>
-        <div id="freebie">
+        <div id="latest_project">
           <h4>OUR LATEST PROJECT</h4>
-          <div id="sign_me_up2">
+          <div id="photo_holder">
             <div class="qb">
               <a href="http://www.quickburp.com"  target="_blank">
                 <img src="img/Quickburp1.png"  style="height:200px;width:320px;"/>
@@ -128,7 +106,9 @@
                 <img src="img/Quickburp2.png"  style="height:200px;width:320px;"/>
               </a>
             </div>
+            <div class="clear_small"></div><!-- This is a clear fix --> 
           </div>
+          <div class="clear_small"></div><!-- This is a clear fix --> 
           <h4>TALK TO US</h4>
           <div id="sign_me_up">
             <form onsubmit="javascript:return false;" id="contact_form" method="post">
