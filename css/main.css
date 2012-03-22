@@ -806,6 +806,9 @@ input, textarea, select {
   #photo_holder {
     width:350px;
   }
+  #contact_form li.email {
+    margin-left:0px;
+  }
 
 }
 
@@ -931,6 +934,9 @@ input, textarea, select {
   #photo_holder {
     width:350px;
   }
+  #contact_form li.email {
+    margin-left:none;
+  }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -1045,6 +1051,9 @@ input, textarea, select {
 
   #photo_holder {
     width:300px;
+  }
+  #contact_form li.email {
+    margin-left:none;
   }
 }
 
