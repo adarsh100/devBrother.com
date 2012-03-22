@@ -75,6 +75,13 @@ body, img {
     font-style:normal;
 	}
 	
+@font-face {
+	font-family:'biodisc';
+	src: url('BIO.ttf') format('truetype');
+	font-weight:normal;
+    font-style:normal;
+	}
+	
 html {
 	height:100%;
 	}
@@ -311,11 +318,42 @@ div .first {
 .devbrother {
 	color:white;
 	font-weight:bold;
-	font-size:35px;
+	font-size:30px;
+	font-family:ChunkFiveRegular;
+	margin-left:100px;
 }
+
+.spider_background{
+background-image: url("../img/spider-background.png");
+background-repeat: no-repeat;
+height: 310px;
+position: absolute;
+top: 75px;
+width: 476px;
+}
+
 #product_image {
-	background-image:url("../img/header_bground.jpg");
-	background-repeat:no-repeat;
+	
+  /* fallback */
+  background-color: #eb592a;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 100, center center,420px, from(#f37c3a), to(#eb592a));
+  
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #f37c3a, #eb592a);
+  
+  /* Firefox 3.6+ */ 
+  background: -moz-radial-gradient(circle, #f37c3aa, #eb592a);
+  
+  /* IE 10 */ 
+  background: -ms-radial-gradient(circle, #f37c3a, #eb592a);
+  
+  /* Opera cannot do radial gradients yet */
+
 	height:420px;
 	clear:both;
 	position:relative;
@@ -431,7 +469,7 @@ div .first {
 .spider{
 position:absolute;
 left:81px;
-top:118px;
+top:30px;
 }
 
 #processing {
@@ -998,7 +1036,7 @@ input, textarea, select {
 
 .anime span{
   position:relative;
-  -webkit-transition: all 0.2s ease-out;
+  
 }
 .anime span:hover {
   top:4px;
