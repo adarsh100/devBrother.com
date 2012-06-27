@@ -87,10 +87,8 @@ html {
 }
 
 body {
-  width:100%;
   padding:0;
   margin:0;
-  height:100%;
   background-color:#eb592a;
 }
 
@@ -233,7 +231,7 @@ div .first {
 }
 
 #wrapper {
-  width:1020px;
+  width:1011px;
   margin:0 auto;
 }
 
@@ -715,15 +713,130 @@ input, textarea, select {
 /*  END OF FORM */
 
 
+.nav { list-style:none;
+margin:0px;
+padding-right: 20px;
+}
+.nav li{float:left;
+padding-left:10px;
+padding-right:5px;
+padding-top:6px;}
+.nav li a{
+	font-family: 'ChunkFiveRegular';
+	font-weight: bold;
+	text-decoration: none;
+	}
+.nav li a:hover{
+	color:#ffffff;
+	text-decoration: underline;
+}
 
 /*  START OF MEDIA QUERIES */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (max-width: 1024px) {
+
+  #wrapper {
+    width:87%;
+    margin:0 auto;
+  }
+  .spider_background {
+    margin:auto;
+  }
+
+  #main_content_bottom {
+    background-image:none;
+    -moz-border-radius:0 0 36px 36px;
+    -webkit-border-radius:0 0 36px 36px;
+    border-radius:0 0 36px 36px;
+    background-color:#ffffff;
+    min-height:145px;
+  }
+
+  img {
+    max-width:100%;
+    height:auto;
+  }
+
+  img {
+    -ms-interpolation-mode:bicubic;
+  }
+
+  #main_content .one_third_first img, #main_content .one_third img {
+    padding-left:0;
+  }
+
+  #product_image {
+    height:420px;
+    background-repeat:no-repeat;
+  }
+
+  #product_content {
+    text-align:center;
+    width:auto;
+    margin-top:0;
+    padding-bottom:30px;
+    padding-right:15px;
+    display: block;
+    float: none;
+  }
+
+  #logos {
+    padding-top:30px;
+  }
+
+  #contact_form input {
+    width:95%;
+  }
+
+  #sign_me_up {
+    margin-left:0;
+    background-image:url("../img/signup_background2.png");
+    background-repeat:no-repeat;
+    width:auto;
+  }
+
+  .bottom_logo {
+    margin-top:11px;
+    width:223px;
+  }
+
+  .bottom_social {
+    margin-left:100px;
+    padding-top:0;
+    width:250px;
+  }
+
+  #contact_form ul {
+    width:auto;
+  }
+
+  .error {
+    font-size:10px;
+  }
+
+  #latest_project {
+    margin-top:50px;
+  }
+
+  #photo_holder {
+    width:350px;
+  }
+  #contact_form li.email {
+    margin-left:0px;
+  }
+  #processing{
+  	 top: 0px;
+  	 left: 15px;}
+
+}
 
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (max-width: 768px) {
 
   #wrapper {
-    width:95%;
+    width:87%;
     margin:0 auto;
   }
   .spider_background {
@@ -809,13 +922,25 @@ input, textarea, select {
   #contact_form li.email {
     margin-left:0px;
   }
+  .nav { list-style:none;
+margin:0px;
+padding-right: 8px;
+}
+.nav li{float:left;
+padding-left:3px;
+padding-right:2px;
+padding-top:2px;}
 
+.scr-only{display: none;}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (max-width: 480px) {
 
-
+#wrapper {
+  width:88%;
+  margin:0 auto;
+}
   #top_content_wrapper, #main_content_wrapper {
     width:100%;
   }
@@ -844,6 +969,8 @@ input, textarea, select {
   #social {
     float:none;
     margin:auto;
+    width: 100%;
+       clear:both;
   }
   .facebook, .tweet {
     display:none;
@@ -937,15 +1064,36 @@ input, textarea, select {
   #contact_form li.email {
     margin-left:none;
   }
-}
+    .nav { list-style:none;
 
+padding-right: 8px;
+text-align: center;
+}
+.nav li{
+	text-align: center;
+	clear: both;
+	text-align: center;	
+	width: 100%;
+	clear: both;
+
+}
+#product_content{clear: both;
+    left: 0;
+    margin-top: 34px;
+    float: left;
+}
+.scr-only{display: none;}
+}
+.devbrother{margin:0px;
+text-align: center;}
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 320px) {
 
   #top_content_wrapper, #main_content_wrapper {
     width:95%;
   }
-
+	
+	.scr-only{ display: none;}
   .spider_background {
     display:none !important;
   }
@@ -1055,6 +1203,8 @@ input, textarea, select {
   #contact_form li.email {
     margin-left:none;
   }
+     .nav { display: none;
+}
 }
 
 
