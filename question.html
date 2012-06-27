@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>devBrother question</title>
+<style>
+  .circle{
+    display: block;
+    position:absolute;
+    background:red;
+    padding:0px;
+    margin:0px;
+  }
+  #ground {
+    height:500px;
+    width:400px;
+    position:relative;
+    padding:0;
+    border:1px solid;
+  }
+</style>
+</head>
+<body>
+  
+  
+  
+  <div id="ground">
+  </div>
+
+
+  
+<script>
+function randomXToY(minVal,maxVal,floatVal)
+{
+  var randVal = minVal+(Math.random()*(maxVal-minVal));
+  return typeof floatVal=='undefined'?Math.round(randVal):randVal.toFixed(floatVal);
+}
+
+Ball = (function() {
+  function Ball(x,y,radius,color){
+    this.center = {x:x, y:y};  
+    this.radius = radius;               
+    this.color = color;
+    this.dx = 2;               
+    this.dy = 2;        
+    this.boundaryHeight = $('#ground').height();
+    this.boundaryWidth = $('#ground').width();
+
+    this.dom  = $('<p class="circle"></p>').appendTo('#ground');
+    this.dom.width(radius*2);
+    this.dom.height(radius*2);
+    var that = this;                              
+    this.dom.click(function(){
+      that.dom.css({top:that.center.x, left: that.center.y});
+    });
+    this.dom.css({'border-radius':radius,background:color});
+         
+    this.placeAtCenter(x,y);         
+  }
+  
+  Ball.prototype.placeAtCenter = function(x,y){
+    this.dom.css({top: Math.round(y- this.radius), left: Math.round(x - this.radius)});
+    this.center.x = Math.round(x);        
+    this.center.y = Math.round(y);             
+  };
+
+
+  Ball.prototype.move = function(){
+    var diameter = this.radius * 2;                                               
+    var radius = this.radius;  
+    if (this.center.x - radius < 0 || this.center.x + radius > this.boundaryWidth ) {
+      this.dx = -this.dx;
+    }
+    if (this.center.y - radius < 0 || this.center.y  + radius > this.boundaryHeight ) {
+      this.dy = -this.dy;
+    }
+    this.placeAtCenter(this.center.x + this.dx ,this.center.y +this.dy);
+
+  };
+  
+  return Ball;
+})();
+
+var number_of_balls = 5;
+var  balls = [];   
+               
+$('document').ready(function(){
+  for (i = 0; i < number_of_balls; i++) { 
+    var boundaryHeight = $('#ground').height();
+    var boundaryWidth = $('#ground').width();
+    var y = randomXToY(30,boundaryHeight - 50);
+    var x = randomXToY(30,boundaryWidth - 50);
+    var radius = randomXToY(15,30);
+    balls.push(new Ball(x,y,radius, '#'+Math.floor(Math.random()*16777215).toString(16))); 
+  }
+  loop(); 
+});
+  
+
+loop = function(){
+  for (var i = 0; i < balls.length; i++){
+    balls[i].move();
+  }
+  setTimeout(loop, 8);    
+};
+
+</script>
+</body>
+</html>
