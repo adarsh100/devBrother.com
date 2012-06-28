@@ -231,7 +231,7 @@ div .first {
 }
 
 #wrapper {
-  width:1011px;
+  width:1020px;
   margin:0 auto;
 }
 
@@ -733,110 +733,12 @@ padding-top:6px;}
 
 /*  START OF MEDIA QUERIES */
 
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (max-width: 1024px) {
-
-  #wrapper {
-    width:87%;
-    margin:0 auto;
-  }
-  .spider_background {
-    margin:auto;
-  }
-
-  #main_content_bottom {
-    background-image:none;
-    -moz-border-radius:0 0 36px 36px;
-    -webkit-border-radius:0 0 36px 36px;
-    border-radius:0 0 36px 36px;
-    background-color:#ffffff;
-    min-height:145px;
-  }
-
-  img {
-    max-width:100%;
-    height:auto;
-  }
-
-  img {
-    -ms-interpolation-mode:bicubic;
-  }
-
-  #main_content .one_third_first img, #main_content .one_third img {
-    padding-left:0;
-  }
-
-  #product_image {
-    height:420px;
-    background-repeat:no-repeat;
-  }
-
-  #product_content {
-    text-align:center;
-    width:auto;
-    margin-top:0;
-    padding-bottom:30px;
-    padding-right:15px;
-    display: block;
-    float: none;
-  }
-
-  #logos {
-    padding-top:30px;
-  }
-
-  #contact_form input {
-    width:95%;
-  }
-
-  #sign_me_up {
-    margin-left:0;
-    background-image:url("../img/signup_background2.png");
-    background-repeat:no-repeat;
-    width:auto;
-  }
-
-  .bottom_logo {
-    margin-top:11px;
-    width:223px;
-  }
-
-  .bottom_social {
-    margin-left:100px;
-    padding-top:0;
-    width:250px;
-  }
-
-  #contact_form ul {
-    width:auto;
-  }
-
-  .error {
-    font-size:10px;
-  }
-
-  #latest_project {
-    margin-top:50px;
-  }
-
-  #photo_holder {
-    width:350px;
-  }
-  #contact_form li.email {
-    margin-left:0px;
-  }
-  #processing{
-  	 top: 0px;
-  	 left: 15px;}
-
-}
-
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (max-width: 768px) {
 
   #wrapper {
-    width:87%;
+    width:95%;
     margin:0 auto;
   }
   .spider_background {
@@ -938,7 +840,7 @@ padding-top:2px;}
 @media only screen and (max-width: 480px) {
 
 #wrapper {
-  width:88%;
+  width:95%;
   margin:0 auto;
 }
   #top_content_wrapper, #main_content_wrapper {
